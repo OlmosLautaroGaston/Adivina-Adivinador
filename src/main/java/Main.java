@@ -2,12 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-    numGenerator number = new numGenerator();
+    numGenerator controller = new numGenerator();
     Scanner scaner = new Scanner(System.in);
-    number.giveNumber();
-        System.out.println("el numero aleatorio es; "+number.toString());
+    controller.giveNumber();
+        System.out.println("el numero aleatorio es; "+controller.toString());
         System.out.println("Intente adivinar el numero aleatorio");
-        scaner.nextInt();
-
-    }
+        boolean result;
+        do {
+            int num = scaner.nextInt();
+            controller.transformNumber(num);
+            result = controller.compareNumber();
+        } while(result != true);{
+            System.out.println("Felicitaciones! Adivinaste el número");
+        }
+        }
 }
