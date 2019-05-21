@@ -17,7 +17,7 @@ public class numGenerator {
         for (int i = 0; i < number.length; i++) {
             number[i] = rd.nextInt(10);
         }
-        
+
     }
 
     public String toString() {
