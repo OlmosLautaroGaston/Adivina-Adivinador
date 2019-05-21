@@ -16,8 +16,8 @@ public class numGenerator {
     public void giveNumber() {
         for (int i = 0; i < number.length; i++) {
             number[i] = rd.nextInt(10);
-            System.out.println(number[i]);
         }
+        
     }
 
     public String toString() {
@@ -29,19 +29,32 @@ public class numGenerator {
         char[] chArr = str.toCharArray();
         for (int i = 0; i < chArr.length; i++) {
             userNumber[i] = Character.getNumericValue(chArr[i]);
-            System.out.println(" " + i + " - " + userNumber[i]);
         }
     }
 
     public boolean compareNumber() {
         boolean result;
-            int conter=0;
+            int counter=0;
+            int counter2=0;
             for (int i = 0, j = 0; i < userNumber.length; i++, j++) {
                 if (userNumber[i] == number[j]) {
-                    conter++;
+                    counter++;
+                    counter2--;
                 }
             }
-            System.out.println(conter+" bien");
+            for (int i = 0;i < userNumber.length; i++){
+                for(int j = 0;j < number.length;j++){
+                    if(userNumber[i] == number[j]) {
+                        counter2++;
+                    }
+                }
+            }
+            System.out.print(counter+" bien ");
+            if(counter2 < 0){
+                System.out.println("0 regular");
+            }else{
+                System.out.println(counter2+" regular");
+            }
             result = Arrays.equals(userNumber,number);
             return result;
         }
