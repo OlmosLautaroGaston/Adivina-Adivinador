@@ -13,7 +13,12 @@ public class numGeneratorTest {
     @After
     public void tearDown() throws Exception {
     }
-    @Test
+    /**@Test
     public void numGeneratorTest(){
-    }
+        numGenerator x = new numGenerator();
+        inicial = x.userNumber;
+        x.transformNumber(1290);
+        result = x.userNumber;
+        assertEquals(inicial,result);
+    }**/
 }
