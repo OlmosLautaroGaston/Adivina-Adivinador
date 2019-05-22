@@ -1,19 +1,15 @@
-import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
-    numGenerator controller = new numGenerator();
-    Scanner scaner = new Scanner(System.in);
-    controller.giveNumber();
-        System.out.println("el numero aleatorio es; "+controller.toString());
-        System.out.println("Intente adivinar el numero aleatorio");
+    public static void main(String[] args) {
+        numGenerator numGenerator = new numGenerator();
+        System.out.println("Intente adivinar el numero aleatorio " + numGenerator.toString());
         boolean result;
+        validator numUser = new validator();
         do {
-            int num = scaner.nextInt();
-            controller.transformNumber(num);
-            result = controller.compareNumber();
-        } while(result != true);{
-            System.out.println("Felicitaciones! Adivinaste el número");
-        }
-        }
+            int num = numUser.readNumber();
+            numGenerator.transformNumber(num);
+            result = numGenerator.compareNumber();
+        } while (result != true);
+            System.out.println("Felicitaciones! Adivinaste! El numero es: " + numGenerator.toString());
+    }
 }
