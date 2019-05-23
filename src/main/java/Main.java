@@ -6,10 +6,10 @@ public class Main {
         boolean result;
         validator numUser = new validator();
         do {
-            int num = numUser.readNumber();
+            int num = numUser.validateNumber();
             numGenerator.transformNumber(num);
             result = numGenerator.compareNumber();
         } while (result != true);
-            System.out.println("Felicitaciones! Adivinaste! El numero es: " + numGenerator.toString());
+        System.out.println("Felicitaciones! Adivinaste! El numero es: " + numGenerator.toString());
     }
 }
