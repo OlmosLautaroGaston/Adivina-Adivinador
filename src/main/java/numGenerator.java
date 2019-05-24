@@ -11,6 +11,11 @@ public class numGenerator {
 
     public numGenerator() {
         giveArrayNumber();
+        System.out.println("**** ADIVINA EL NUMERO SECRETO ****");
+        System.out.println("** ingrese un numero con 4 cifras no repetidas **");
+        System.out.println("** bien = numero correcto , posicion correcta **");
+        System.out.println("** regular = numero correcto, posicion incorrecta **");
+
     }
 
     /**
