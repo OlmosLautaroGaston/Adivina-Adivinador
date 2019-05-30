@@ -2,8 +2,7 @@ import java.util.Random;
 
 public abstract class AbstractNumFactory {
     private Random rd = new Random();
-    private int[] number = new int[4];
-
+    public int[] number = new int[4];
 
     public AbstractNumFactory() {
 
@@ -47,8 +46,9 @@ public abstract class AbstractNumFactory {
     }
 
     /**
-     * shows the number generated through its positions in the array
+     * @return values ​​of the positions of the random arrNumbers
      */
+
     public String toString() {
         return "" + number[0] + number[1] + number[2] + number[3] + "";
     }

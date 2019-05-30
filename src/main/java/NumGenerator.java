@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class NumGenerator extends AbstractNumFactory {
 
-    private int[] number = new int[4];
     private int[] userNumber = new int[4];
     private int goodNum = 0;
     private int regularNum = 0;

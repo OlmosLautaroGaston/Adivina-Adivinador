@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class GuessNumber extends AbstractNumFactory {
     Scanner scanner = new Scanner(System.in);
-    private int[] number = new int[4];
     private int[] goodNumber = new int[4];
     private int[] guessedNumber = new int[4];
     private int respGood;
