@@ -1,19 +1,27 @@
 
 public class Main {
     public static void main(String[] args) {
-        startGame initGame = new startGame();
+        StartGame initGame = new StartGame();
         int entr = initGame.validateInitNumber();
         if (entr==1){
-            numGenerator numGenerator = new numGenerator();
+            NumGenerator numGenerator = new NumGenerator();
             boolean result;
-            validator numUser = new validator();
+            Validator numUser = new Validator();
             do {
                 int num = numUser.validateNumber();
                 numGenerator.transformNumber(num);
                 result = numGenerator.compareNumber();
             } while (result != true);
             System.out.println("Felicitaciones! Adivinaste! El numero secreto es: " + numGenerator.toString());
-        }else{
+        }else if (entr==2){
+            int rsult=0;
+            GuessNumber numGuesser = new GuessNumber();
+            numGuesser.giveNumber();
+            do {
+                System.out.println("Tu numero es "+numGuesser.toString()+" ?");
+                rsult = numGuesser.logicBubleGame();
+            }while(rsult !=4);
+
 
         }
 

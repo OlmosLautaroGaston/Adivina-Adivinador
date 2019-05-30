@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class validator {
+public class Validator {
     Scanner scaner = new Scanner(System.in);
     private int usernum;
     private int[] userNum = new int[4];
 
-    public validator() {
+    public Validator() {
     }
 
     private void readNumber() {

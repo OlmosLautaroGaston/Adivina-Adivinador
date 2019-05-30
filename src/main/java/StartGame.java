@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class startGame {
+public class StartGame {
 
     private Scanner firstEntr = new Scanner(System.in);
     private int entrance;
 
-    public startGame() {
+    public StartGame() {
         System.out.println("**** BIENVENIDOS AL JUEGO ADIVINA ADIVINADOR ****");
         System.out.println("**** SELECCIÓN DE JUEGOS *****");
         System.out.println("1 ----> Adivinar el numero secreto");
