@@ -16,9 +16,7 @@ public class Main {
         }else if (entr==2){
             int rsult=0;
             GuessNumber numGuesser = new GuessNumber();
-            numGuesser.giveNumber();
             do {
-                System.out.println("Tu numero es "+numGuesser.toString()+" ?");
                 rsult = numGuesser.logicBubleGame();
             }while(rsult !=4);
 
