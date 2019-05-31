@@ -2,6 +2,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class NumGeneratorTest {
@@ -14,19 +16,37 @@ public class NumGeneratorTest {
     public void tearDown() throws Exception {
     }
     @Test
-    public void NumGeneratorTest(){
+    public void transformNumberTest(){
         NumGenerator x = new NumGenerator();
         int[] inicial = x.getUserNumber();
-        x.transformNumber(1290);
+        x.transformNumber(9180);
         int [] result = x.getUserNumber();
         assertEquals(inicial,result);
     }
     @Test
+    public void transformNumberTestTwo(){
+        NumGenerator num = new NumGenerator();
+        int[] init=num.getUserNumber();
+        num.transformNumber(2341);
+        int[] result=num.getUserNumber();
+        assertEquals(init,result);
+    }
+    @Test
+    public void toArrayAleatoryNum(){
+        NumGenerator num = new NumGenerator();
+        int[] init=num.getUserNumber();
+        num.toArrayAleatoryNum();
+        int[] result=num.getUserNumber();
+        assertEquals(init,result);
+    }
+    @Test
+    public void toArrayAleatoryNumTwo(){
+    }
+    @Test
     public void compareNumberTest(){
-        NumGenerator numG = new NumGenerator();
-        int [] arr= new int[4];
-        numG.setUserNumber(arr);
-
-
+        NumGenerator num = new NumGenerator();
+        num.toArrayAleatoryNum();
+        boolean result = num.compareNumber();
+        assertEquals(false,result);
     }
 }

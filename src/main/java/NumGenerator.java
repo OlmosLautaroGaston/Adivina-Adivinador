@@ -13,10 +13,14 @@ public class NumGenerator extends AbstractNumFactory {
 
     @Override
     public void viewOfGame() {
-        System.out.println("**** ADIVINA EL NUMERO SECRETO ****");
-        System.out.println("** ingrese un numero con 4 cifras no repetidas **");
-        System.out.println("** bien = numero correcto , posicion correcta **");
-        System.out.println("** regular = numero correcto, posicion incorrecta **");
+        System.out.println(" _______________________");
+        System.out.println("|      PC THINKER       |");
+        System.out.println("|GOOD = correct position|");
+        System.out.println("|REGULAR = incorrect pos|");
+        System.out.println("|insert a 4-digit number|");
+        System.out.println("|unique and unrepeatable|");
+        System.out.println("|_______________________|");
+        System.out.println("Try to guess the secret number!!");
     }
 
     /**
@@ -41,8 +45,8 @@ public class NumGenerator extends AbstractNumFactory {
         return userNumber;
     }
 
-    public void setUserNumber(int[] userNumber) {
-        this.userNumber = userNumber;
+    public int[] getNumber() {
+        return number;
     }
 
     /**
@@ -66,7 +70,7 @@ public class NumGenerator extends AbstractNumFactory {
                 }
             }
         }
-        System.out.print(getGoodNum() + " bien ");
+        System.out.print(getGoodNum() + " good ");
         if (getRegularNum() < 0) {
             System.out.println("0 regular");
         } else {

@@ -17,7 +17,7 @@ public class Validator {
         String str = (new Integer(usernum)).toString();
         char[] chArr = str.toCharArray();
         if (chArr.length != 4) {
-            System.out.println("Error! El numero ingresado NO contiene 4 cifras");
+            System.out.println("ERROR! The number entered DOES NOT contain 4 digits");
             readNumber();
 
         } else {
@@ -48,7 +48,7 @@ public class Validator {
             transformNumber();
             repeatedNum = verifyNumber(usernum);
             if (repeatedNum != false) {
-                System.out.println("Error! el numero ingresado contiene cifras repetidas");
+                System.out.println("ERROR! The number entered contains repeated figures");
             }
         }
         return usernum;

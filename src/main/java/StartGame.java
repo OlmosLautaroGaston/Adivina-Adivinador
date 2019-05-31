@@ -1,3 +1,4 @@
+import javax.xml.bind.SchemaOutputResolver;
 import java.util.Scanner;
 
 public class StartGame {
@@ -6,10 +7,12 @@ public class StartGame {
     private int entrance;
 
     public StartGame() {
-        System.out.println("**** BIENVENIDOS AL JUEGO ADIVINA ADIVINADOR ****");
-        System.out.println("**** SELECCIÓN DE JUEGOS *****");
-        System.out.println("1 ----> Adivinar el numero secreto");
-        System.out.println("2 ----> La computadora debe adivina el numero secreto");
+        System.out.println(" _________________");
+        System.out.println("|  GUESS GUESSER  |");
+        System.out.println("|    GAME MODE    |");
+        System.out.println("|1-  PC THINKER   |");
+        System.out.println("|2- HUMAN THINKER |");
+        System.out.println("|_________________|");
 
     }
 
@@ -24,7 +27,7 @@ public class StartGame {
                 correct=true;
             }else{
                 correct=false;
-                System.out.println("ERROR!! Debe ingresar un numero válido");
+                System.out.println("ERROR! You must enter a valid number");
             }
         }while(correct==false);
         return entrance;

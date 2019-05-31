@@ -14,7 +14,11 @@ public class GuessNumber extends AbstractNumFactory {
 
     @Override
     public void viewOfGame() {
-        System.out.println("Bienvenido al juego GuessNumber");
+        System.out.println(" _______________________");
+        System.out.println("|     HUMAN THINKER     |");
+        System.out.println("|GOOD = correct position|");
+        System.out.println("|REGULAR = incorrect pos|");
+        System.out.println("|_______________________|");
     }
 
 
@@ -46,8 +50,8 @@ public class GuessNumber extends AbstractNumFactory {
 
     public int logicBubleGame() {
         toArrayAleatoryNum();
-        System.out.println("Tu numero es " + toString() + " ?");
-        System.out.println("Ingrese los numeros Bien");
+        System.out.println("your number is " + toString() + " ?");
+        System.out.println("enter the GOOD numbers..");
         respGood = scanner.nextInt();
         if (respGood == 1) {
             counter++;

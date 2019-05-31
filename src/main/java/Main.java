@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         StartGame initGame = new StartGame();
         int entr = initGame.validateInitNumber();
-        if (entr==1){
+        if (entr == 1) {
             NumGenerator numGenerator = new NumGenerator();
             boolean result;
             Validator numUser = new Validator();
@@ -12,13 +12,13 @@ public class Main {
                 numGenerator.transformNumber(num);
                 result = numGenerator.compareNumber();
             } while (result != true);
-            System.out.println("Felicitaciones! Adivinaste! El numero secreto es: " + numGenerator.toString());
-        }else if (entr==2){
-            int rsult=0;
+            System.out.println("CONGRATULATIONS! YOU GUESSED! The secret number is: " + numGenerator.toString());
+        } else if (entr == 2) {
+            int rsult = 0;
             GuessNumber numGuesser = new GuessNumber();
             do {
                 rsult = numGuesser.logicBubleGame();
-            }while(rsult !=4);
+            } while (rsult != 4);
 
 
         }
